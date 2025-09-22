@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "760243743268",
+    "project_id": "inmobewise-8e0e0",
+    "storage_bucket": "inmobewise-8e0e0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:760243743268:android:eed16985f1c084f1e386b1",
+        "android_client_info": {
+          "package_name": "com.MindflyStudio.Inmobewise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "760243743268-t5dor80eblafs6pj7v6m647vv90fkeje.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCt0HsS1saCfemCc1ntzzzZ2hgv0qpTuBQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "760243743268-t5dor80eblafs6pj7v6m647vv90fkeje.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "760243743268-m2peqqakroa8boo8nohl18d8j21u53mc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.DTIConsultoresMindflyStudio.Inmobewise"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
