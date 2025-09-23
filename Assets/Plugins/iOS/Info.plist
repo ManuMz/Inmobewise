@@ -1,0 +1,11 @@
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleURLName</key>
+        <string>com.MindFlyStudio.InmobeWise</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>inmobewise-app</string>
+        </array>
+    </dict>
+</array>
