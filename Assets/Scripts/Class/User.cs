@@ -5,7 +5,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class Account{
+public class Account
+{
     //Usuario testing
     //content.init("testing","1",'{"nombre":"Ivan Villegas rojas","correo":"villegas.rojas.ivan@gmail.com","telefono":"2211620123","postal_code":"90796"}')
     public string nombre;
@@ -15,8 +16,9 @@ public class Account{
     public bool logged;
     public Configuration configuration;
 }
+
 [Serializable]
-public class Usuario
+public class User:EventArgs
 {    
     //Campos privados
     private string email;

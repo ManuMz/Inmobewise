@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 public enum PanelType
 {
@@ -30,9 +31,17 @@ public enum InputFieldType
     passwordRegister,
 }
 
-public class UIController : MonoBehaviour
+public enum AlertType
 {
-    public static UIController sharedInstance;
+    sucessAlert,
+    dangerAlert,
+    warningAlert,
+    infoAlert,
+}
+
+public class UIController : Singleton<UIController> //unica instancia del objeto
+{
+    //public static UIController sharedInstance;
 
     [SerializeField]
     private List<GameObject> panels; //paneles de la app
@@ -41,17 +50,14 @@ public class UIController : MonoBehaviour
     private bool switchMenu;
     private PanelType currentPanelType;
 
+    //Alert Prefabs Path
+    private const string alertPath = "";
+    
+    //Modal Prefabs
+    private const string modalPath = "";
     private void Awake()
     {
-        if (sharedInstance == null)
-        {
-            sharedInstance = this;
-            SetStart();
-        }
-        else
-        {
-            Destroy(this);
-        }
+        SetStart();
     }
     private void Start()
     {
@@ -63,8 +69,17 @@ public class UIController : MonoBehaviour
     }
 
     private void SetStart()
-    {
+    {   //Suscripcion a eventos
+        //SessionController.sharedInstance.OnUserStateChanged += SessionController_OnChangeUserState;
+        
         ShowPanel(PanelType.login);
+    }
+
+    //metodo suscriptor
+    private void SessionController_OnChangeUserState(object sender,
+        EventArgs e)
+    {
+        
     }
 
     /// <summary>
@@ -212,5 +227,10 @@ public class UIController : MonoBehaviour
     public void ExitApp()
     {
         Application.Quit();
+    }
+
+    private void OnDestroy()
+    {
+        //SessionController.sharedInstance.OnUserStateChanged -= SessionController_OnChangeUserState; //desuscripcion a evento
     }
 }

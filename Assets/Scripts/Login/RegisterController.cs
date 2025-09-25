@@ -27,9 +27,9 @@ public class RegisterController : MonoBehaviour
 
     private void Register()
     {
-        fullNameInput = UIController.sharedInstance.GetInputField(
+        fullNameInput = UIController.Instance.GetInputField(
             InputFieldType.fullNameRegister);
-        userNameInput = UIController.sharedInstance.GetInputField(
+        userNameInput = UIController.Instance.GetInputField(
             InputFieldType.userNameRegister);
 
         fullNameInput.onValueChanged.AddListener(
@@ -44,14 +44,14 @@ public class RegisterController : MonoBehaviour
     {
         if (string.IsNullOrEmpty(fullName)) 
         {
-            UIController.sharedInstance.SetInputFieldMessage(
+            UIController.Instance.SetInputFieldMessage(
               InputFieldType.fullNameRegister, "Campo requerido",
               INPUTFIELD_MESSAGE);
             //return false;
         }
         else
         {
-            UIController.sharedInstance.SetInputFieldMessage(
+            UIController.Instance.SetInputFieldMessage(
              InputFieldType.fullNameRegister, "",
              IDLE_INPUTFIELD);
             //return true;
@@ -61,7 +61,7 @@ public class RegisterController : MonoBehaviour
     {
         if (string.IsNullOrEmpty(userName))
         {
-            UIController.sharedInstance.SetInputFieldMessage(
+            UIController.Instance.SetInputFieldMessage(
                InputFieldType.userNameRegister, "Campo requerido",
                INPUTFIELD_MESSAGE);
             //return false;
@@ -69,14 +69,14 @@ public class RegisterController : MonoBehaviour
         }
         else if (userName.Length<4)
         {
-            UIController.sharedInstance.SetInputFieldMessage(
+            UIController.Instance.SetInputFieldMessage(
               InputFieldType.userNameRegister, "Debe tener minimo 4 caracteres",
               INPUTFIELD_MESSAGE);
             //return false;
         }
         else
         {
-            UIController.sharedInstance.SetInputFieldMessage(
+            UIController.Instance.SetInputFieldMessage(
               InputFieldType.userNameRegister, "",
               IDLE_INPUTFIELD);
             //return true;
@@ -97,7 +97,7 @@ public class RegisterController : MonoBehaviour
     }
     public void BackToLogin()
     {
-        UIController.sharedInstance.ShowPanel(PanelType.login);
+        UIController.Instance.ShowPanel(PanelType.login);
     }
 
 }

@@ -7,6 +7,6 @@ public class PanelController : MonoBehaviour
 
     public void SendUITrigger(int triggerIndex)
     {
-        UIController.sharedInstance.SendUITrigger(triggerIndex);
+        UIController.Instance.SendUITrigger(triggerIndex);
     }
 }

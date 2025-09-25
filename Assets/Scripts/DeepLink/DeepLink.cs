@@ -261,7 +261,7 @@ public class DeepLink : MonoBehaviour
     /// <returns></returns>
     private async UniTaskVoid DownloadBuildingAssetBundleByBuildingId(string buildingId)
     {
-        UIController.sharedInstance.HideMenuBuildings(); //Oculta el menú de inmuebles
+        UIController.Instance.HideMenuBuildings(); //Oculta el menú de inmuebles
         productsAR = player.GetComponent<TouchController>().GetFatherProducts();// Extrae el objeto producsAr y lo instancia en este metodo para su uso
         relocatePlayer.GetComponent<RelocatePlayer>().PosInitial(); //Colocar al usuario / player en la posición por default
 
@@ -330,7 +330,7 @@ public class DeepLink : MonoBehaviour
    
     private async UniTaskVoid DownloadBuildingAssetBundleByBuildingcode(string buildingCode)
     {
-        UIController.sharedInstance.HideMenuBuildings(); //Oculta el menú de inmuebles
+        UIController.Instance.HideMenuBuildings(); //Oculta el menú de inmuebles
         productsAR = player.GetComponent<TouchController>().GetFatherProducts();// Extrae el objeto producsAr y lo instancia en este metodo para su uso
         relocatePlayer.GetComponent<RelocatePlayer>().PosInitial(); //Colocar al usuario / player en la posición por default
 

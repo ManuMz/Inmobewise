@@ -126,7 +126,7 @@ public class ContainerProducto : ScrollItem
             changeObj = IsContainerToChangeProdct(this.gameObject);
             if (changeObj == false)
             {
-                UIController.sharedInstance.SwitchMenu();//OCULTAR EL MENU
+                UIController.Instance.SwitchMenu();//OCULTAR EL MENU
             }
             else
             {
@@ -309,7 +309,7 @@ public class ContainerProducto : ScrollItem
                     changeObj = IsContainerToChangeProdct(this.gameObject);
                     if (changeObj == false)
                     {
-                        UIController.sharedInstance.SwitchMenu();//OCULTAR EL MENU
+                        UIController.Instance.SwitchMenu();//OCULTAR EL MENU
                     }
                     else
                     {

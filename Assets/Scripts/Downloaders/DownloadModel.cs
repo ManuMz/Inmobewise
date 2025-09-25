@@ -340,7 +340,7 @@ public class DownloadModel : MonoBehaviour
     /// <returns></returns>
     private async UniTaskVoid DownloadAssetBuildings(Inmuebles building)
     {
-        UIController.sharedInstance.HideMenuBuildings();//Oculta el Menu de los Inmuebles
+        UIController.Instance.HideMenuBuildings();//Oculta el Menu de los Inmuebles
         RelocatePlayer.sharedInstance.PosInitial();//Reestablece la posicion del jugador en la pos inicial
 
         string path = "";
@@ -394,7 +394,7 @@ public class DownloadModel : MonoBehaviour
     /// <returns></returns>
     private async UniTaskVoid DownloadAssetBundleByBuildingCode(string buildingCode)
     {
-        UIController.sharedInstance.HideMenuBuildings();//Oculta el Menu de los Inmuebles
+        UIController.Instance.HideMenuBuildings();//Oculta el Menu de los Inmuebles
         RelocatePlayer.sharedInstance.PosInitial();//Reestablece la posicion del jugador en la pos inicial
 
         string path = "";

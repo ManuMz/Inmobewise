@@ -15,6 +15,6 @@ public class LoginController : MonoBehaviour
 
     public void RegisterHere()
     {
-        UIController.sharedInstance.ShowPanel(PanelType.register);
+        UIController.Instance.ShowPanel(PanelType.register);
     }
 }

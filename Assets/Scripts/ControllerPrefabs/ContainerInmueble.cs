@@ -54,7 +54,7 @@ public class ContainerInmueble : ScrollItem
         viewButton.onClick.RemoveAllListeners();
         viewButton.onClick.AddListener(() =>
         {
-            UIController.sharedInstance.HideMenuBuildings();
+            UIController.Instance.HideMenuBuildings();
 
             RelocatePlayer.sharedInstance.PosInitial();//Reestablece la posicion del jugador en la pos inicial
             MenuBuildings.Clear(DownloadModel.sharedInstance.GetFatherBuildings());

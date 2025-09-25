@@ -589,7 +589,7 @@ public class CartController : MonoBehaviour
                 //obtencion del nombre del ultimo producto 
                 productName = lastProduct.descripcion;
 
-                UIController.sharedInstance.HideMenu();
+                UIController.Instance.HideMenu();
                 TutorialControl.sharedInstance.InstatiateNotAvailablePackage(tutorialItems.notAvailablePackage, productName);//Notificación notAvailablePackage
 
                 this.RecalculatePhysicDimensionsTotales(int.Parse(lastProductInCart.idProBodPre));
@@ -655,7 +655,7 @@ public class CartController : MonoBehaviour
                 //obtencion del nombre del ultimo producto 
                 productName = lastProduct.descripcion;
 
-                UIController.sharedInstance.HideMenu();
+                UIController.Instance.HideMenu();
                 TutorialControl.sharedInstance.InstatiateNotAvailablePackage(tutorialItems.notAvailablePackage, productName);//Notificación notAvailablePackage
 
                 this.RecalculatePhysicDimensionsTotales(int.Parse(lastProductInCart.idProBodPre));

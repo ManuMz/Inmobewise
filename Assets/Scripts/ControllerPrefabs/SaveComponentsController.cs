@@ -412,8 +412,8 @@ public class SaveComponentsController : MonoBehaviour
             MenuBuildingsView.Clear(fatherBuildings);//Limpia Padre de los inmuebles
             MenuBuildingsView.Clear(fatherProducts);//Limpia Padre de los Productos
             RelocatePlayer.sharedInstance.PosInitial();//Reestablece la posicion del jugador en la pos inicial
-            UIController.sharedInstance.HideFavoriteBuildingsMenu();
-            UIController.sharedInstance.HideMenuBuildings();
+            UIController.Instance.HideFavoriteBuildingsMenu();
+            UIController.Instance.HideMenuBuildings();
             //Cargar el GameObject
             GameObject obj = bundle.LoadAsset<GameObject>(parameter);
 
